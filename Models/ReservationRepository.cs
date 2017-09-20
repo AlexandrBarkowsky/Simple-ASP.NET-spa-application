@@ -7,7 +7,7 @@ namespace SPA.Models
 {
     public class ReservationRepository
     {
-        public static ReservationRepository repo = new ReservationRepository();
+        private static ReservationRepository repo = new ReservationRepository();
         public static ReservationRepository Current { get { return repo; } }
         private List<Reservation> data = new List<Reservation>
         {
@@ -16,7 +16,7 @@ namespace SPA.Models
             new Reservation {ReservationId = 3, ClientName = "Igor", Location = "Home"}
         };
 
-        public IEnumerable<Reservation> getall() {
+        public IEnumerable<Reservation> GetAll() {
             return data;
         }
         public Reservation Get(int id) {

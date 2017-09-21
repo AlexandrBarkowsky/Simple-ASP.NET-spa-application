@@ -23,7 +23,7 @@ namespace SPA.Models
             return data.Where(m => m.ReservationId == id).FirstOrDefault();
         }
         public Reservation Add(Reservation item) {
-            item.ReservationId = data.Count + 1;
+            item.ReservationId = (int)data.Count + 1;
             data.Add(item);
             return item;
         }
